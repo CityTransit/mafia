@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link href="bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="styles.css" rel="stylesheet" media="screen">
+  </head>
+
+  <body>
+    <div class="container text-center">
+      <div class="header">
+        <h3 class="text-muted">Mafia</h3>
+      </div>
+
+      <!-- Home section, dissapears on start -->
+      <div id="home" class="container space" style="vertical-align:middle">
+        <!-- Player # input -->
+        <input id="players" type="number" class="form-control" placeholder="Players:">
+        
+        <h1>
+          <a id="start" class="btn btn-lg btn-success">START</a>
+          <!-- Not enough players alert -->
+          <div id="alert" class="alert alert-danger hidden"></div>
+        </h1>
+
+        <!-- Extra Roles -->
+        <h5>
+          <br>
+          <div class="row">
+            <div class="col-xs-2"></div>
+            <div class="col-xs-4">
+              <ul class="list-unstyled text-left">
+                <li><input type="checkbox" name="role"
+                value="Detective"> Detective</li>
+                <li><input type="checkbox" name="role"
+                value="Doctor"> Doctor</li>
+              </ul>
+            </div>
+            <div class="col-xs-4">
+              <ul class="list-unstyled text-right">
+                <li>Witness <input type="checkbox" name="role"
+                value="Witness"> </li>
+                <li>Vigilante <input type="checkbox" name="role"
+                value="Vigilante"></li>
+              </ul>
+            </div>
+            <div class="col-xs-2"></div>
+          </div>
+        </h5>
+      </div>
+
+      <!-- Middle message area -->
+      <div id="class" class="container space hidden">
+        Hand phone to first player...
+      </div>
+    </div>
+    <!-- Bottom button -->
+    <div class="footer">
+      <a id="spoilerbtn" class="btn btn-lg btn-success text-center
+      hidden">SHOW</a>
+      <a id="nextbtn" class="btn btn-lg btn-success text-center hidden">NEXT</a>
+    </div>
+
+    <!-- Load scripts -->
+    <script language="JavaScript" src="jquery-1.10.2.min.js" type="text/javascript"></script>
+    <script language="JavaScript" src="bootstrap.min.js" type="text/javascript"></script>
+    <script language="JavaScript" src="mafia.js" type="text/javascript"></script>
+  </body>
+</html>
